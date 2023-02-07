@@ -152,30 +152,35 @@ main {
     position: absolute;
     right: 17rem;
     z-index: 3;
+    border-radius: 5px;
 }
 
 .img-3 {
     position: absolute;
     right: 8.75rem;
     z-index: 2;
+    border-radius: 10px;
 }
 
 .img-4 {
     position: absolute;
     right: 4rem;
     z-index: 1;
+    border-radius: 15px;
 }
 
 .img-1 {
     position: absolute;
     right: 35.5rem;
     z-index: 2;
+    border-radius: 10px;
 }
 
 .img-5 {
     position: absolute;
     right: 50.5rem;
     z-index: 1;
+    border-radius: 15px;
 }
 
 /* ----- NAVIGATION ICONS ----- */
@@ -190,6 +195,7 @@ main {
 .arrows {
     font-size: var(--small);
     color: #999999;
+    cursor: pointer;
 }
 
 #prev {
