@@ -4,15 +4,78 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="viewport" content="width=1440, height=1603, initial-scale=1"> -->
     <title>The Rusty Pelican Restaurant</title>
     <link rel="icon" type="image/svg+xml" href="./images/icon.svg">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;1,800&family=Quicksand:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+    <div class="wrapper">
+        <nav id="navbar">
+            <div class="logo-con">
+                <img class="logo-icon" src="./images/icon.svg" alt="Pelican Icon">
+                <img class="logo-name" src="./images/rest-title.svg" alt="The Rusty Pelican Restaurant">
+                <div class="grass"></div>
+            </div>
+            <ul class="links">
+                <li>our story</li>
+                <li>menu</li>
+                <li>gallery</li>
+            </ul>
+            <div class="social-links">
+                <img class="fb-icon" src="./media/Facebook.svg" alt="Facebook Icon">
+                <img class="yelp-icon" src="./media/Yelp.svg" alt="Yelp Icon">
+                <img class="phone-icon" src="./media/phone.svg" alt="Phone Icon">
+            </div>
+        </nav>
+        <main class="content">
+            <div class="main-top">
+                <div class="main-left">
+                <div class="address-con">
+                    <p id="address" class="address">6124 Beatline Road<p>
+                    <p id="address-2" class="address">Long Beach, MS 39560<p>
+                    <p id="phone-num" class="address">(228) 868-5511<p> 
+                </div>
+                <div class="hour-con">
+                    <p id="week" class="schedule">Open 7 Days a Week</p>
+                    <p id="hour" class="schedule">6:30am to 2:00pm</p>
+                    <div id="schedule-con" class="schedule">
+                        <p id="breakfast" class="schedule">Breakfast ALL DAY</p>
+                        <p id="lunch" class="schedule">Lunch 11:00am-2:00pm</p>
+                    </div>
+                </div>
+            </div>
+                <div class="main-right">
+                    <img class="outside-img" src="./images/outside.png">
+                </div>
+            </div>
+            <p class="cta">Ask about our DAILY SPECIALS!!</p>
+           <div class="main-bottom">
+                <div class="img-carousel">
+                    <img src="./images/salad.jpeg" class="img-5" style="width: 30rem; height: 15rem;">
+                    <img src="./images/gravy.jpeg" class="img-1" style="width: 40rem; height: 20rem;">
+                    <img src="./images/building.jpeg" class="img-2" style="width: 50rem; height: 25rem;">
+                    <img src="./images/roastbeef.jpeg" class="img-3" style="width: 40rem; height: 20rem;">
+                    <img src="./images/salad.jpeg" class="img-4" style="width: 30rem; height: 15rem;">
+                </div>
+                <div class="nav-icons">
+                    <div id="prev" class="arrows">&#10140;</div>
+                    <div class="dot-con">
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                    <div id="next" class="arrows">&#10140;</div>
+                </div>
+           </div>
+        </main>
+        <footer></footer>
+    </div>
 
     <script src="main.js"></script>
 </body>

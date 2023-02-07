@@ -10,4 +10,207 @@ body, html {
 
 :root {
     --main-ft: "Quicksand";
+    --v-large: 3rem; /* 48px */
+    --large: 2.5rem; /* 40px */
+    --standard: 1.875rem; /* 30px */
+    --small: 1.5rem;  /* 24px */
+    --left-right-margin: 6.625rem;
+    --link-margin: 2rem;
+}
+
+.wrapper {
+    background-image: url(./images/background.jpg);
+    background-size: cover;
+    height: 100%;
+    display: grid;
+    grid-template-rows: .5fr 5fr .325fr;
+}
+
+/* ---------- NAVBAR ---------- */
+#navbar {
+    position: relative;
+    margin-right: var(--left-right-margin);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-con {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grass {
+    position: absolute;
+    background-image: url(./images/grass.svg);
+    height: 5rem;
+    width: 95vw;
+    left: 5%;
+    bottom: 3.9%;
+}
+
+ul {
+    list-style-type: none;
+    font-family: var(--main-ft), sans-serif;
+    font-size: var(--standard);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--link-margin);
+    z-index: 1;
+}
+
+li {
+    cursor: pointer;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--link-margin);
+}
+
+.social-links > img {
+    cursor: pointer;
+    z-index: 1;
+    transition: all .2s ease;
+}
+
+.fb-icon:hover {
+    filter: invert(32%) sepia(11%) saturate(3000%) hue-rotate(183deg) brightness(97%) contrast(87%);
+}
+
+.yelp-icon:hover {
+    filter: invert(15%) sepia(72%) saturate(6471%) hue-rotate(13deg) brightness(82%) contrast(108%);
+}
+
+.phone-icon:hover {
+    filter: invert(66%) sepia(50%) saturate(1641%) hue-rotate(37deg) brightness(96%) contrast(80%);
+}
+
+/* ---------- MAIN ---------- */
+main {
+    margin: 3.5rem var(--left-right-margin) 0 var(--left-right-margin);
+}
+
+/* ----- MAIN TOP ----- */
+.main-top {
+    display: flex;
+    text-align: center;
+    gap: 2rem;
+}
+
+.main-left {
+   margin-top: 3.5rem;
+   display: flex;
+   flex-direction: column;
+   gap: 5rem;
+}
+
+/* ----- ADDRESS ----- */
+.address-con {
+    font-family: var(--main-ft), sans-serif;
+    font-size: var(--standard);
+    font-weight: bold;
+}
+
+#phone-num {
+    font-size: var(--large);
+}
+
+/* ----- HOURS OF OPERATIONS ----- */
+.hour-con {
+    font-family: var(--main-ft), sans-serif;
+    font-size: var(--small);
+    display: flex;
+    flex-direction: column;
+    gap: var(--link-margin);
+}
+
+/* ----- CTA ----- */
+.cta {
+    margin: 3.5rem 0;
+    font-family: var(--main-ft), sans-serif;
+    font-size: var(--large);
+    font-weight: bold;
+    text-align: center;
+}
+
+/* ---------- MAIN BOTTOM ---------- */
+.img-carousel {
+    margin-top: 18rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 5%;
+}
+
+.img-2 {
+    position: absolute;
+    right: 17rem;
+    z-index: 3;
+}
+
+.img-3 {
+    position: absolute;
+    right: 8.75rem;
+    z-index: 2;
+}
+
+.img-4 {
+    position: absolute;
+    right: 4rem;
+    z-index: 1;
+}
+
+.img-1 {
+    position: absolute;
+    right: 35.5rem;
+    z-index: 2;
+}
+
+.img-5 {
+    position: absolute;
+    right: 50.5rem;
+    z-index: 1;
+}
+
+/* ----- NAVIGATION ICONS ----- */
+.nav-icons {
+    margin-top: 15rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.arrows {
+    font-size: var(--small);
+    color: #999999;
+}
+
+#prev {
+    transform: rotate(180deg);
+}
+
+.dot-con {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background-color: #999999;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+    background-color: rgba(102,101,101, .68);
 }
