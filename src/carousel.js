@@ -34,7 +34,6 @@ function getImgPosition() {
     images.forEach(img => {
         imgArr.push(img);
     });
-    console.log(imgArr);
     return imgArr;
 }
 
@@ -44,18 +43,15 @@ function getSizeImg() {
     images.forEach(img => {
         imgArr.push(img.getAttribute("style"));
     });
-    console.log(imgArr);
     return imgArr;
 }
 
 function changeDotPosition(direction) {
     const dots = document.querySelectorAll(".dot");
     const currentIndex = dotArr.findIndex(dot => dot === true);
-    console.log(currentIndex);
     let nextIndex;
     if(direction === "next") {
         nextIndex = currentIndex + 1;
-        console.log(nextIndex);
         dots[currentIndex].setAttribute("style", "width: 12px; height: 12px; background-color: #999999;");
         dotArr[currentIndex] = false;
         if(nextIndex > dotArr.length - 1) {
