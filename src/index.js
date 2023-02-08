@@ -1,7 +1,8 @@
-import { prevImg } from "./carousel";
+import { changeDotPosition, nextImg } from "./carousel";
 
 
-const prev = document.getElementById("prev");
-prev.addEventListener("click", (e) => {
-    prevImg();
+const next = document.getElementById("next");
+next.addEventListener("click", (e) => {
+    nextImg();
+    changeDotPosition(e.target.id);
 });

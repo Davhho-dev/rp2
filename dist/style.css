@@ -216,6 +216,12 @@ main {
     background-color: #999999;
 }
 
+.dot:nth-child(1) {
+    height: 16px;
+    width: 16px;
+    background-color: black;
+}
+
 /* ---------- FOOTER ---------- */
 footer {
     background-color: rgba(102,101,101, .68);
