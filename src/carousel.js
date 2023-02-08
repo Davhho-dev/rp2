@@ -15,6 +15,19 @@ function nextImg() {
     }    
 }
 
+function prevImg() {
+    const arr = getImgPosition();
+    const size = getSizeImg();
+    let nextIndex = 0;
+    for(let i = 0; i < arr.length - 1; i++) {
+        nextIndex++;
+        arr[i].setAttribute("style", `${zIndexArr[nextIndex]} ${positionArr[nextIndex]} ${size[nextIndex]} transition: all .5s ease;`);
+        if(nextIndex === arr.length - 1) {
+            arr[nextIndex].setAttribute("style", `${zIndexArr[0]} ${positionArr[0]} ${size[0]} transition: all .5s ease;`);
+        }
+    }
+}
+
 function getImgPosition() {
     const imgArr = [];
     const images = document.querySelectorAll(".img-carousel img");
@@ -52,18 +65,18 @@ function changeDotPosition(direction) {
             dots[nextIndex].setAttribute("style", "width: 16px; height: 16px; background-color: black");
             dotArr[nextIndex] = true;
         }
+    }else {
+        nextIndex = currentIndex - 1;
+        dots[currentIndex].setAttribute("style", "width: 12px; height: 12px; background-color: #999999;");
+        dotArr[currentIndex] = false;
+        if(nextIndex < 0) {
+            dots[dots.length - 1].setAttribute("style", "width: 16px; height: 16px; background-color: black;");
+            dotArr[dots.length - 1] = true;
+        }else {
+            dots[nextIndex].setAttribute("style", "width: 16px; height: 16px; background-color: black;");
+            dotArr[nextIndex] = true;
+        }
     }
-    // if(direction === "next") {
-    //     let index = 0;
-    //     for(let i = 0; i < dotArr.length; i++) {
-    //         if(dotArr[i]) {
-    //             dots[i].setAttribute("height", "12px;");
-    //             dots[i].setAttribute("width", "12px;");
-    //             dots[i].setAttribute("backgroundColor", "#999999;");
-    //             dotArr[i] = false;
-    //         }
-    //     }
-    // }
 }
 
-export {nextImg, changeDotPosition};
+export {nextImg, prevImg, changeDotPosition};
