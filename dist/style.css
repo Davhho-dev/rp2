@@ -19,12 +19,30 @@ body, html {
 }
 
 .wrapper {
+    position: relative;
     background-image: url(./images/background.jpg);
     background-size: cover;
     height: 100%;
     display: grid;
     grid-template-rows: .5fr 5fr .325fr;
 }
+
+.main-right {
+    z-index: 1;
+}
+
+.ice-bg {
+    position: absolute;
+    top: 1.5rem;
+}
+
+/* ----- LINKS ----- */
+a:link,
+a:visited {
+    color: black;
+    text-decoration: none;
+}
+
 
 /* ---------- NAVBAR ---------- */
 #navbar {
@@ -131,6 +149,7 @@ main {
 
 /* ----- CTA ----- */
 .cta {
+    position: relative;
     margin: 3.5rem 0;
     font-family: var(--main-ft), sans-serif;
     font-size: var(--large);
@@ -196,6 +215,7 @@ main {
     font-size: var(--small);
     color: #999999;
     cursor: pointer;
+    z-index: 1;
 }
 
 #prev {
@@ -207,6 +227,7 @@ main {
     justify-content: center;
     align-items: center;
     gap: 1rem;
+    z-index: 1;
 }
 
 .dot {
@@ -225,4 +246,5 @@ main {
 /* ---------- FOOTER ---------- */
 footer {
     background-color: rgba(102,101,101, .68);
+    z-index: 1;
 }
