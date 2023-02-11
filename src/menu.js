@@ -7,6 +7,7 @@ function buildMenu() {
     createBreakfast();
     createOmelet();
     createEggPlates();
+    createPancakes();
     createSideOrders();
     createKidsMenu();
     createVietnameseSpecials();
@@ -22,7 +23,7 @@ function createAppetizers() {
     const appetizers = document.getElementById("appetizers");
     const foodWrapper = document.createElement("div");
     foodWrapper.classList.add("food-wrapper");
-    foodWrapper.appendChild(createFood("Chef's Platter (Cheese Sticks, Chicken Tenders, Egg Roll & Crab Rangoon)", "none", "$8.45"));
+    foodWrapper.appendChild(createFood("Chef's Platter", "(Cheese Sticks, Chicken Tenders, Egg Roll & Crab Rangoon)", "$8.45"));
     foodWrapper.appendChild(createFood("Crab Rangoon (6)", "none", "$5.75"));
     foodWrapper.appendChild(createFood("Mozzarella Cheese Sticks (6)", "none", "$6.25"));
     foodWrapper.appendChild(createFood("Chicken Tenders (4)", "none", "$7.25"));
@@ -96,7 +97,7 @@ function createSandwiches() {
     const foodWrapper = document.createElement("div");
     foodWrapper.classList.add("food-wrapper");
     foodWrapper.appendChild(createSubFoodTitle(["Add Fries for $1.95", "Add Cajun Fries, Onion Rings, or Sweet Potato Fries for $2.25"]));
-    foodWrapper.appendChild(createFood("Reuben (Corned beef, Sauerkraut, Swiss Cheese & Thousand Island on Grilled Rye Bread)", "$6.95"));
+    foodWrapper.appendChild(createFood("Reuben", "(Corned beef, Sauerkraut, Swiss Cheese & Thousand Island on Grilled Rye Bread)", "$6.95"));
     foodWrapper.appendChild(createFood("Crab Swiss on rye", "none", "$7.55"));
     foodWrapper.appendChild(createFood("Grilled or Fried Chicken Breast on bun", "none", "$7.45"));
     foodWrapper.appendChild(createFood("Roast Beef (Hot or Cold", "none", "$7.25"));
@@ -104,7 +105,7 @@ function createSandwiches() {
     foodWrapper.appendChild(createFood("Turkey or Ham (Hot or Cold)", "none", "$7.45"));
     foodWrapper.appendChild(createFood("Turkey or Ham & Cheese (Hot or Cold)", "none", "$7.45"));
     foodWrapper.appendChild(createFood("BLT", "none", "$6.65"));
-    foodWrapper.appendChild(createFood("Grilled Cheese", "$3.10"));
+    foodWrapper.appendChild(createFood("Grilled Cheese", "none", "$3.10"));
     foodWrapper.appendChild(createFood("Chicken Salad or Tuna Salad on toast", "none", "$6.65"));
     foodWrapper.appendChild(createFood("Tuna or Chicken Salad on Croissant", "none", "$7.45"));
     foodWrapper.appendChild(createFood("Patty Melt", "none", "$5.75"));
@@ -146,9 +147,9 @@ function createEggPlates() {
     const foodWrapper = document.createElement("div");
     foodWrapper.classList.add("food-wrapper");
     foodWrapper.appendChild(createSubFoodTitle(["Served with Grits or Hash browns & Toast"]));
-    foodWrapper.appendChild(createSplitFood("1 Egg any style", "$5.45", "with meat $7.60"));
-    foodWrapper.appendChild(createSplitFood("2 Eggs any style", "$5.95", "with meat $8.15"));
-    foodWrapper.appendChild(createSplitFood("3 Eggs any style", "$6.15", "with meat $8.45"));
+    foodWrapper.appendChild(createSplitFood(["1 Egg any style", "$5.45", "with meat $7.60"]));
+    foodWrapper.appendChild(createSplitFood(["2 Eggs any style", "$5.95", "with meat $8.15"]));
+    foodWrapper.appendChild(createSplitFood(["3 Eggs any style", "$6.15", "with meat $8.45"]));
     eggplate.appendChild(foodWrapper);
 }
 
@@ -156,9 +157,9 @@ function createPancakes() {
     const pancakes = document.getElementById("pancakes");
     const foodWrapper = document.createElement("div");
     foodWrapper.classList.add("food-wrapper");
-    foodWrapper.appendChild(createSplitFood("Short Stack (2)", "$5.95", "with meat $7.75"));
-    foodWrapper.appendChild(createSplitFood("Full Stack (3)", "$7.35", "with meat $9.55"));
-    foodWrapper.appendChild(createSplitFood("French Toast (3)", "$7.95", "with meat $9.95"));
+    foodWrapper.appendChild(createSplitFood(["Short Stack (2)", "$5.95", "with meat $7.75"]));
+    foodWrapper.appendChild(createSplitFood(["Full Stack (3)", "$7.35", "with meat $9.55"]));
+    foodWrapper.appendChild(createSplitFood(["French Toast (3)", "$7.95", "with meat $9.95"]));
     foodWrapper.appendChild(createFood("Add Blueberries, Pecans, Chocolate chips, Strawberries, or Bananas", "none", "$1.75"));
     pancakes.appendChild(foodWrapper);
 }
@@ -167,12 +168,12 @@ function createSideOrders() {
     const sideOrders = document.getElementById("side-orders");
     const foodWrapper = document.createElement("div");
     foodWrapper.classList.add("food-wrapper");
-    foodWrapper.appendChild(createSplitFood("Biscuit & Gravy", "(1) $4.25", "(2) $6.45"));
+    foodWrapper.appendChild(createSplitFood(["Biscuit & Gravy", "(1) $4.25", "(2) $6.45"]));
     foodWrapper.appendChild(createFood("Hash brown", "none", "$2.95"));
     foodWrapper.appendChild(createFood("Grits", "none", "$1.90"));
-    foodWrapper.appendChild(createSplitFood("Oatmeal", "cup $3.25", "bowl $4.75"));
+    foodWrapper.appendChild(createSplitFood(["Oatmeal", "cup $3.25", "bowl $4.75"]));
     foodWrapper.appendChild(createFood("Bacon, Ham, or Sausage", "none", "$3.10"));
-    foodWrapper.appendChild(createSplitFood("Eggs", "(1) $1.00", "(2) $1.95"));
+    foodWrapper.appendChild(createSplitFood(["Eggs", "(1) $1.00", "(2) $1.95"]));
     foodWrapper.appendChild(createFood("Toast (White or Wheat)", "none", "$1.95"));
     foodWrapper.appendChild(createFood("Croissant", "none", "$2.55"));
     foodWrapper.appendChild(createFood("Biscuit, Rye Toast, or English Muffin", "none", "$2.25"));
@@ -203,7 +204,7 @@ function createVietnameseSpecials() {
     const foodWrapper = document.createElement("div");
     foodWrapper.classList.add("food-wrapper");
     foodWrapper.appendChild(createFood("Bánh Mì Gà", "none", "$8.55"));
-    foodWrapper.appendChild(createSplitFood("Pho", "Dine In $10.55", "take out $11.55"));
+    foodWrapper.appendChild(createSplitFood(["Pho", "Dine In $10.55", "take out $11.55"]));
     foodWrapper.appendChild(createFood("Bún Bò Xào", "none", "$10.75"));
     foodWrapper.appendChild(createFood("Bún Tôm Nem Nướng", "none", "$12.75"));
     foodWrapper.appendChild(createImg("../dist/images/vietnamese.jpeg", "width: 381px; height: 285px;"));
@@ -313,10 +314,11 @@ function createFood(item, subitem, price) {
         subFoodItem.classList.add("sub-food-item");
         subFoodItem.textContent = subitem;
 
-        subItemWrapper.appendChild(subFoodItem);
+        subItemWrapper.appendChild(foodItem);
         subItemWrapper.appendChild(filler);
         subItemWrapper.appendChild(foodPrice);
         itemWrapper.appendChild(subItemWrapper);
+        itemWrapper.append(subFoodItem);
     }else {
         itemWrapper.appendChild(filler);
         itemWrapper.appendChild(foodPrice);
@@ -337,29 +339,20 @@ function createSubFoodTitle(foodArr) {
     return subTitleWrapper;
 }
 
-function createSplitFood(item, price, extra) {
+function createSplitFood(list) {
     const itemSplitWrapper = document.createElement("div");
-    itemSplitWrapper.classList.add("item-split-wrapper");
-
-    const foodItem = document.createElement("p");
-    foodItem.classList.add("food-item");
-    foodItem.textContent = item;
-    itemSplitWrapper.appendChild(foodItem);
-
-    const foodPrice = document.createElement("p");
-    foodPrice.classList.add("food-price");
-    foodPrice.textContent = price;
-
-    const addOns = document.createElement("p");
-    addOns.classList.add("add-ons");
-    addOns.textContent = extra;
-
-    const filler = document.createElement("span");
-    filler.classList.add("filler");
-    itemSplitWrapper.appendChild(filler);
-    itemSplitWrapper.appendChild(foodPrice);
-    itemSplitWrapper.appendChild(filler);
-    itemSplitWrapper.appendChild(addOns);
+    itemSplitWrapper.classList.add('item-split-wrapper');
+    for(let i = 0; i < list.length; i++) {
+        const foodItem = document.createElement("p");
+        foodItem.classList.add("food-item");
+        foodItem.textContent = list[i];
+        itemSplitWrapper.appendChild(foodItem);
+        if(i !== list.length - 1) {
+            const filler = document.createElement("span");
+            filler.classList.add("filler");
+            itemSplitWrapper.appendChild(filler); 
+        };
+    };
     return itemSplitWrapper;
 }
 
