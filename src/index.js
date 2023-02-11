@@ -1,6 +1,5 @@
 import { changeDotPosition, nextImg, prevImg } from "./carousel";
-import { createAppetizers, createSalads, createPoBoys, createSpecialitySandwiches, createSandwiches } from "./menu";
-
+import { buildMenu } from "./menu";
 
 const next = document.getElementById("next");
 next.addEventListener("click", (e) => {
@@ -14,8 +13,4 @@ prev.addEventListener("click", (e) => {
     changeDotPosition(e.target.id);
 })
 
-createAppetizers();
-createSalads();
-createPoBoys();
-createSpecialitySandwiches();
-createSandwiches();
+buildMenu();
