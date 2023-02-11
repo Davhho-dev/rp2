@@ -14,7 +14,9 @@ body, html {
     --large: 2.5rem; /* 40px */
     --standard: 1.875rem; /* 30px */
     --small: 1.5rem;  /* 24px */
+    --v-small: 1rem;
     --left-right-margin: 6.625rem;
+    --menu-left-right-margins: 2.25rem;
     --link-margin: 2rem;
 }
 
@@ -247,4 +249,70 @@ main {
 footer {
     background-color: rgba(102,101,101, .68);
     z-index: 1;
+}
+
+/* ---------- MENU SECTION ---------- */
+.menu-wrapper {
+    font-family: var(--main-ft), sans-serif;
+    margin: 3.5rem var(--menu-left-right-margins) 0 var(--menu-left-right-margins);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-header {
+    font-size: var(--v-large);
+    font-weight: bold;
+}
+
+.col-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5rem;
+}
+
+/* ----- FOOD TITLE ----- */
+.food-title {
+    font-size: var(--large);
+    font-weight: bold;
+}
+
+.item-wrapper,
+.sub-item-wrapper {
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.filler {
+    margin: .6rem .1rem 0 .1rem;
+    flex-grow: 1;
+    border-bottom: 2px dotted black;
+}
+
+.item-wrapper > * {
+    font-weight: normal;
+}
+
+.sub-food-title {
+    font-size: 1rem;
+}
+
+/* ----- MENU FOOD ITEM SPECIAL CASES ----- */
+#col-left .food-title .food-wrapper > .item-wrapper:nth-child(1) {
+    /* display: flex;
+    flex-direction: column;
+    align-items: start; */
+}
+
+#col-left #appetizers.food-title .food-wrapper > .item-wrapper:nth-child(1) {
+    /* display: flex;
+    flex-direction: column;
+    align-items: start; */
+}
+
+#col-left #appetizers.food-title .food-wrapper > .item-wrapper:nth-child(1) > .filler {
+    width: 10%;
 }
