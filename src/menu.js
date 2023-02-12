@@ -69,7 +69,7 @@ function createPoBoys() {
     foodWrapper.appendChild(createSubFoodTitle(["Add Fries for $1.95", "Add Cajun Fries, Onion Rings, or Sweet Potato Fries for $2.25"]));
     foodWrapper.appendChild(createFood("Fried Shrimp", "none", "$9.10"));
     foodWrapper.appendChild(createFood("Shrimp & Catfish", "none", "$12.95"));
-    foodWrapper.appendChild(createFood("Soft Shell Crab", "none", "14.65"));
+    foodWrapper.appendChild(createFood("Soft Shell Crab", "none", "$14.65"));
     foodWrapper.appendChild(createFood("Fried Catfish", "none", "$9.10"));
     foodWrapper.appendChild(createFood("Roast Beef & Gravy", "none", "$9.10"));
     foodWrapper.appendChild(createFood("Ham or Turkey", "none", "$8.25"));
@@ -83,11 +83,12 @@ function createPoBoys() {
 function createSpecialitySandwiches() {
     const specialSandwiches = document.getElementById("specialty-sandwiches");
     const foodWrapper = document.createElement("div");
+    foodWrapper.classList.add("food-wrapper");
     foodWrapper.appendChild(createSubFoodTitle(["Served with Fries"]));
     foodWrapper.appendChild(createFood("Philly Steak and Cheese", "with onions, bell peppers & a side of Au jus", "$9.15"));
     foodWrapper.appendChild(createFood("Pelican (Chicken Philly)", "with onions, bell peppers & our special pelican sauce", "$9.15"));
     foodWrapper.appendChild(createFood("Crab Swiss Poboy", "none", "$9.75"));
-    foodWrapper.appendChild(createFood("Club (Ham, Roast Beef, Bacon, & Cheese)", "none", "$9.95"));
+    foodWrapper.appendChild(createFood("Club", "Ham, Roast Beef, Bacon, & Cheese", "$9.95"));
     foodWrapper.appendChild(createFood("Roast Beef & Bacon Double Decker", "none", "$9.95"));
     specialSandwiches.appendChild(foodWrapper);
 }
@@ -134,8 +135,8 @@ function createOmelet() {
     foodWrapper.classList.add("food-wrapper");
     foodWrapper.appendChild(createSubFoodTitle(["Served with Grits or Hash brown & Toast"]));
     foodWrapper.appendChild(createFood("Cheese", "none", "$6.95"));
-    foodWrapper.appendChild(createFood("Meat & Cheese (Bacon, Ham, or Sausage)", "none", "$8.65"));
-    foodWrapper.appendChild(createFood("Western Omelet (Onions, Bell Peppers, Tomatoes)", "none", "$8.65"));
+    foodWrapper.appendChild(createFood("Meat & Cheese", "Bacon, Ham, or Sausage", "$8.65"));
+    foodWrapper.appendChild(createFood("Western Omelet", "Onions, Bell Peppers, Tomatoes", "$8.65"));
     foodWrapper.appendChild(createFood("Grilled Shrimp", "none", "$13.95"));
     foodWrapper.appendChild(createFood("Add to any omelet Bacon, Ham, or Sausage", "none", "$2.35"));
     foodWrapper.appendChild(createFood("Onion, Bell Pepper, Tomato, or Jalepño", "none", "$.75"));
@@ -179,7 +180,7 @@ function createSideOrders() {
     foodWrapper.appendChild(createFood("Biscuit, Rye Toast, or English Muffin", "none", "$2.25"));
     foodWrapper.appendChild(createFood("Fresh Fruit Cup", "none", "$3.95"));
     foodWrapper.appendChild(createFood("Boiled or Poached Egg", "none", "each $1.75"));
-    foodWrapper.appendChild(createFood("Home Fries", "none", "#3.10"));
+    foodWrapper.appendChild(createFood("Home Fries", "none", "$3.10"));
     sideOrders.appendChild(foodWrapper);
 }
 
@@ -256,9 +257,9 @@ function createSteakPlatter() {
     foodWrapper.classList.add("food-wrapper");
     foodWrapper.appendChild(createSubFoodTitle(["Served with one Side, Salad, or Hot Roll"]));
     foodWrapper.appendChild(createFood("Steak and Shrimp", "8oz Ribeye and Tempura Fried Shrimp", "$20.45"));
-    foodWrapper.appendChild(createFood("12oz. Ribeye when available", "none", "Market Price"));
+    foodWrapper.appendChild(createFood("12oz. Ribeye", "when available", "Market Price"));
     foodWrapper.appendChild(createFood("8oz. Ribeye", "none", "Market Price"));
-    foodWrapper.appendChild(createFood("Weekend Prime Rib when available", "none", "Market Price"));
+    foodWrapper.appendChild(createFood("Weekend Prime Rib", "when available", "Market Price"));
     steak.appendChild(foodWrapper);
 }
 
