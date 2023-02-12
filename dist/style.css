@@ -269,7 +269,15 @@ footer {
 .col-wrapper {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 5rem;
+    gap: 3rem;
+}
+
+#col-left,
+#col-center,
+#col-right {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 /* ----- FOOD TITLE ----- */
@@ -280,9 +288,9 @@ footer {
 
 .item-wrapper,
 .sub-item-wrapper {
+    width: 100%;
     font-size: 1rem;
     display: flex;
-    justify-content: space-between;
     align-items: center;
 }
 
@@ -296,23 +304,185 @@ footer {
     font-weight: normal;
 }
 
-.sub-food-title {
-    font-size: 1rem;
+#col-left,
+#col-center,
+#col-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+/* ----- LEFT COLUMN ----- */
+#col-left > div > .food-wrapper > .item-wrapper {
+    padding-left: 1rem;
+    margin-top: .5rem;
+}
+
+#col-left > div > .food-wrapper > .sub-title-wrapper {
+    padding-bottom: 1.125rem;
+}
+
+#col-left > div > .food-wrapper > .food-img {
+    margin: 1rem 0 0 3rem;
+}
+
+#col-left > div > .food-wrapper > .sub-title-wrapper {
+    font-size: var(--v-small);
+}
+
+/* ----- LEFT COLUMN SPECIAL CASES ----- */
+#specialty-sandwiches {
+    width: 102%;
+}
+
+#specialty-sandwiches > .food-wrapper > .item-wrapper {
+    width: 98%;
+}
+
+#specialty-sandwiches > .food-wrapper > .item-wrapper > .sub-item-wrapper > .food-item,
+#specialty-sandwiches > .food-wrapper > .item-wrapper > .food-item {
+    font-weight: bold;
+}
+
+
+
+/* ----- CENTER COLUMN ----- */
+#col-center {
+    margin-top: -4rem;
+    text-align: center;
+}
+
+#col-center > div > .food-wrapper > .sub-title-wrapper {
+    font-weight: normal;
+}
+
+#col-center > #breakfast-menu > .food-wrapper > .sub-title-wrapper > .sub-food-title {
+    font-size: 1.5rem;
+}
+
+#col-center > .sub-food-title {
+    font-size: 1.5rem; 
+    font-weight: bold;
+}
+
+#col-center > div > .food-wrapper > .sub-title-wrapper {
+    font-size: var(--v-small);
+}
+
+#col-center > div > .food-wrapper > .item-wrapper {
+    text-align: left;
+    margin-top: .5rem;
+}
+
+#col-center > div > .food-wrapper > .item-split-wrapper {
+    margin-top: .25rem;
+}
+
+#pancakes > .food-wrapper > .item-wrapper {
+    text-align: center !important;
+    font-style: italic;
+}
+
+#pancakes > .food-wrapper >  .item-wrapper > .food-item {
+    width: 35ch;
+}
+
+#kids-menu > .food-wrapper > .sub-title-wrapper {
+    margin-bottom: 1rem;
+}
+
+#kids-menu > .food-wrapper > .food-img {
+    margin-top: 4.5rem;
+}
+
+#kids-menu > .food-wrapper > .food-img + .food-img {
+    transform: rotateY(180deg);
+}
+
+/* ----- CENTER COLUMN SPECIAL CASES ----- */ 
+#breakfast-menu > .food-wrapper > .item-wrapper > .sub-item-wrapper > .food-item,
+#omelets > .food-wrapper > .item-wrapper:nth-child(2) > .food-item,
+#omelets > .food-wrapper > .item-wrapper:nth-child(5) > .food-item,
+#omelets > .food-wrapper > .item-wrapper > .sub-item-wrapper > .food-item,
+#egg-plates > .food-wrapper > .item-split-wrapper > .food-item:nth-child(1),
+#pancakes > .food-wrapper > .item-split-wrapper > .food-item:nth-child(1) {
+    font-weight: bold;
+}
+
+/* ----- RIGHT COLUMN ----- */
+#col-right {
+    margin-top: -1.5rem;
+    text-align: right;
+}
+
+#col-right > div > .food-wrapper > .sub-title-wrapper {
+    font-size: var(--v-small);
+    margin-bottom: 1rem;
+}
+
+#col-right > div > .food-wrapper > .item-wrapper {
+    text-align: left;
+    margin-top: .5rem;
+    padding-left: 2rem;
+}
+
+#col-right > div > .food-wrapper > .item-split-wrapper {
+    padding-left: 2rem;
+}
+
+#vietnamese-specials > .food-wrapper > img {
+    margin-top: 1rem;
+    margin-right: 2rem;
+}
+
+/* ----- RIGHT COLUMN SPECIAL CASES ----- */
+#platters > .food-wrapper > .item-wrapper > .food-item,
+#platters > .food-wrapper > .item-wrapper > .sub-item-wrapper > .food-item,
+#seafood > .food-wrapper > .item-wrapper > .sub-item-wrapper > .food-item,
+#steak > .food-wrapper > .item-wrapper > .sub-item-wrapper > .food-item {
+    font-weight: bold;
+}
+
+#seafood-alacarte {
+    padding-right: var(--menu-left-right-margins);
+    width: 110%;
 }
 
 /* ----- MENU FOOD ITEM SPECIAL CASES ----- */
-#col-left .food-title .food-wrapper > .item-wrapper:nth-child(1) {
-    /* display: flex;
+.item-wrapper:has(> .sub-item-wrapper) { /*selecting item wrappers that only have sub-items*/
+    /* border: 1px solid black; */
+    display: flex;
     flex-direction: column;
-    align-items: start; */
+    justify-content: center;
+    align-items: start;
+}
+
+.item-split-wrapper { /*for list that has 3 columns*/
+    font-size: var(--v-small);
+    font-weight: normal;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sub-food-item {
+    font-style: italic;
+    width: 35ch;
+}
+
+/* #col-left .food-title .food-wrapper > .item-wrapper:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
 }
 
 #col-left #appetizers.food-title .food-wrapper > .item-wrapper:nth-child(1) {
-    /* display: flex;
+    display: flex;
     flex-direction: column;
-    align-items: start; */
+    align-items: start;
 }
 
 #col-left #appetizers.food-title .food-wrapper > .item-wrapper:nth-child(1) > .filler {
     width: 10%;
-}
+} */
+
