@@ -5,11 +5,13 @@
 }
 
 body, html {
-    height: 100vh;
+    /* height: 100vh; */
+    min-height: 100vh;
 }
 
 :root {
     --main-ft: "Quicksand";
+    --food-ft: "Open Sans";
     --v-large: 3rem; /* 48px */
     --large: 2.5rem; /* 40px */
     --standard: 1.875rem; /* 30px */
@@ -24,7 +26,7 @@ body, html {
     position: relative;
     background-image: url(./images/background.jpg);
     background-size: cover;
-    height: 100%;
+    height: 100vh;
     display: grid;
     grid-template-rows: .5fr 5fr .325fr;
 }
@@ -65,7 +67,7 @@ a:visited {
     position: absolute;
     background-image: url(./images/grass.svg);
     height: 5rem;
-    width: 95vw;
+    width: 95.2vw;
     left: 5%;
     bottom: 3.9%;
 }
@@ -312,6 +314,10 @@ footer {
     justify-content: space-evenly;
 }
 
+.col-wrapper > div > div > .food-wrapper > .item-wrapper {
+    font-family: var(--food-ft);
+}
+
 /* ----- LEFT COLUMN ----- */
 #col-left > div > .food-wrapper > .item-wrapper {
     padding-left: 1rem;
@@ -407,6 +413,7 @@ footer {
 #egg-plates > .food-wrapper > .item-split-wrapper > .food-item:nth-child(1),
 #pancakes > .food-wrapper > .item-split-wrapper > .food-item:nth-child(1) {
     font-weight: bold;
+    font-family: var(--food-ft);
 }
 
 /* ----- RIGHT COLUMN ----- */
