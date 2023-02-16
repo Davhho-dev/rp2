@@ -286,7 +286,7 @@ function createDesserts() {
     foodWrapper.classList.add("food-wrapper");
     foodWrapper.appendChild(createFood("Bread Pudding with Brandy Sauce", "none", "$4.75"));
     foodWrapper.appendChild(createFood("Mississippi Mud Pie", "none", "$4.75"));
-    foodWrapper.appendChild(createFood("New York Style Cheese Cake with Raspberry Sauce", "none", "$4.75"));
+    foodWrapper.appendChild(createFood("New York Style Cheese Cake", "with Raspberry Sauce", "$4.75"));
     foodWrapper.appendChild(createFood("Turtle Cheese Cake", "none", "$4.95"));
     desserts.appendChild(foodWrapper);
 }
