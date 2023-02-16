@@ -5,7 +5,6 @@
 }
 
 body, html {
-    /* height: 100vh; */
     min-height: 100vh;
 }
 
@@ -61,6 +60,11 @@ a:visited {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.logo-name {
+    cursor: pointer;
+    z-index: 1;
 }
 
 .grass {
@@ -251,12 +255,13 @@ main {
 footer {
     background-color: rgba(102,101,101, .68);
     z-index: 1;
+    height: 5.4rem;
 }
 
 /* ---------- MENU SECTION ---------- */
 .menu-wrapper {
     font-family: var(--main-ft), sans-serif;
-    margin: 3.5rem var(--menu-left-right-margins) 0 var(--menu-left-right-margins);
+    margin: 0 var(--menu-left-right-margins) 0 var(--menu-left-right-margins);
     display: flex;
     flex-direction: column;
     justify-content: center;
