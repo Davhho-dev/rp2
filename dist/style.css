@@ -266,6 +266,9 @@ footer {
 .menu-header {
     font-size: var(--v-large);
     font-weight: bold;
+    text-align: center;
+    margin: 2.9rem;
+    padding-left: 3rem;
 }
 
 .col-wrapper {
@@ -414,6 +417,68 @@ footer {
 #pancakes > .food-wrapper > .item-split-wrapper > .food-item:nth-child(1) {
     font-weight: bold;
     font-family: var(--food-ft);
+}
+
+#egg-plates > .food-wrapper > .item-split-wrapper:nth-child(2) {
+    display: grid;
+    grid-template-columns: auto 1.1fr auto 1fr auto;
+}
+
+#egg-plates > .food-wrapper > .item-split-wrapper:nth-child(2) > .food-item:nth-child(3), 
+#egg-plates > .food-wrapper > .item-split-wrapper:nth-child(2) > .food-item:nth-child(5), 
+#egg-plates > .food-wrapper > .item-split-wrapper:nth-child(3) > .food-item:nth-child(3), 
+#egg-plates > .food-wrapper > .item-split-wrapper:nth-child(3) > .food-item:nth-child(5),
+#egg-plates > .food-wrapper > .item-split-wrapper:nth-child(4) > .food-item:nth-child(3), 
+#egg-plates > .food-wrapper > .item-split-wrapper:nth-child(4) > .food-item:nth-child(5) {
+    font-family: var(--food-ft);
+}
+
+#egg-plates > .food-wrapper > .item-split-wrapper:nth-child(3),
+#egg-plates > .food-wrapper > .item-split-wrapper:nth-child(4) {
+    display: grid;
+    grid-template-columns: auto 1fr auto 1fr auto;
+}
+
+#pancakes > .food-wrapper > .item-split-wrapper:nth-child(1) > .food-item:nth-child(3),
+#pancakes > .food-wrapper > .item-split-wrapper:nth-child(1) > .food-item:nth-child(5),
+#pancakes > .food-wrapper > .item-split-wrapper:nth-child(2) > .food-item:nth-child(3), 
+#pancakes > .food-wrapper > .item-split-wrapper:nth-child(2) > .food-item:nth-child(5),
+#pancakes > .food-wrapper > .item-split-wrapper:nth-child(3) > .food-item:nth-child(3), 
+#pancakes > .food-wrapper > .item-split-wrapper:nth-child(3) > .food-item:nth-child(5) { 
+    /* color: green; */
+    font-family: var(--food-ft);
+}
+
+#pancakes > .food-wrapper > .item-split-wrapper:nth-child(1) {
+    display: grid;
+    grid-template-columns: auto 1.2fr auto 1fr auto;
+}
+
+#pancakes > .food-wrapper > .item-split-wrapper:nth-child(2) {
+    display: grid;
+    grid-template-columns: auto 1.45fr auto 1fr auto;
+}
+
+#pancakes > .food-wrapper > .item-split-wrapper:nth-child(3) {
+    display: grid;
+    grid-template-columns: auto 1fr auto 1fr auto;
+}
+
+#side-orders > .food-wrapper > .item-split-wrapper {
+    font-family: var(--food-ft);
+    display: grid;
+}
+
+#side-orders > .food-wrapper > .item-split-wrapper:nth-child(1) {
+    grid-template-columns: auto 1fr auto 2fr auto;
+}
+
+#side-orders > .food-wrapper > .item-split-wrapper:nth-child(4) {
+    grid-template-columns: auto 1.1fr auto 1fr auto;
+}
+
+#side-orders > .food-wrapper > .item-split-wrapper:nth-child(6) {
+    grid-template-columns: auto 1.3fr auto 1fr auto;
 }
 
 /* ----- RIGHT COLUMN ----- */

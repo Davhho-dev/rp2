@@ -13,4 +13,11 @@ prev.addEventListener("click", (e) => {
     changeDotPosition(e.target.id);
 })
 
+const menu = document.querySelector(".links li:nth-child(2)");
+menu.addEventListener("click", () => {
+    const home = document.querySelector(".content");
+    home.style.display = "none";
+    const menuWrapper = document.querySelector(".menu-wrapper");
+    menuWrapper.style.display = "block";
+})
 buildMenu();
