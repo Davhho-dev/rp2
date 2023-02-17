@@ -26,7 +26,12 @@ menu.addEventListener("click", () => {
     menuWrapper.style.display = "block";
     const iceBackground = document.querySelector(".ice-bg");
     iceBackground.style.display = "none";
-    wrapper.style.minHeight = "198.4vh";
+    wrapper.style.gridTemplateRows = ".25fr 11fr .325fr";
+    footer.style.marginTop = "10rem";
+    // wrapper.style.minHeight = "198.4vh";
+    // wrapper.style.minHeight = "3180.35px";
+    // console.log(menuWrapper.getAttribute("height"));
+    // console.log(menuWrapper);
 });
 
 const logoName = document.querySelector(".logo-name");
@@ -34,9 +39,19 @@ logoName.addEventListener("click", () => {
     const footer = document.querySelector("footer");
     wrapper.removeChild(menuWrapper);
     wrapper.insertBefore(home, footer);
-    wrapper.style.minHeight = "100vh";
+    wrapper.style.gridTemplateRows = ".5fr 5fr .325fr";
     const iceBackground = document.querySelector(".ice-bg");
     iceBackground.style.display = "block";
+    console.log(window.innerHeight);
 });
+
+
+function calculateHeight(con) {
+    const navbar = document.getElementById("navbar");
+    const footer = document.querySelector("footer");
+    const total = parseFloat(window.getComputedStyle(navbar).getPropertyValue("height")) + parseFloat(window.getComputedStyle(footer).getPropertyValue("height")) + parseFloat(window.getComputedStyle(con).getPropertyValue("height"));
+    console.log(total);
+    return total;
+}
 
 buildMenu();

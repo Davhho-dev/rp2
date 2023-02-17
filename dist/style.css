@@ -25,7 +25,7 @@ body, html {
     position: relative;
     background-image: url(./images/background.jpg);
     background-size: cover;
-    height: 100vh;
+    min-height: 100vh;
     display: grid;
     grid-template-rows: .5fr 5fr .325fr;
 }
@@ -256,12 +256,13 @@ footer {
     background-color: rgba(102,101,101, .68);
     z-index: 1;
     height: 5.4rem;
+    margin-top: 8rem;
 }
 
 /* ---------- MENU SECTION ---------- */
 .menu-wrapper {
     font-family: var(--main-ft), sans-serif;
-    margin: 0 var(--menu-left-right-margins) 0 var(--menu-left-right-margins);
+    margin: 1rem var(--menu-left-right-margins) 0 var(--menu-left-right-margins);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -522,7 +523,7 @@ footer {
 
 #seafood-alacarte {
     padding-right: var(--menu-left-right-margins);
-    width: 110%;
+    width: 108%;
 }
 
 /* ----- MENU FOOD ITEM SPECIAL CASES ----- */
@@ -546,20 +547,68 @@ footer {
     font-style: italic;
     width: 35ch;
 }
+@media screen and (min-width: 1025px) and (max-width: 1440px) and (min-height: 1000px) {
+    .links {
+        color: lightblue;
+    }
 
-/* #col-left .food-title .food-wrapper > .item-wrapper:nth-child(1) {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
+    .ice-bg {
+        /* height: 100vh; */
+        /* top: 10%; */
+    }
+    
 }
 
-#col-left #appetizers.food-title .food-wrapper > .item-wrapper:nth-child(1) {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
+@media screen and (min-width: 1441px) and (max-width: 2560px) and (min-height: 1000px) {
+    .links {
+        color: green;
+    }
+
+    .wrapper {
+        min-height: 129vh;
+    }
+
+    .ice-bg {
+        left: 20%;
+    }
+
+    .img-carousel {
+        left: -21.5%;
+    }
+
+    /* .img-2 {
+        width: 60rem !important;
+        height: 30rem !important;
+    }
+
+    .img-3 {
+        width: 50rem !important;
+        height: 25rem !important;
+    }
+
+    .img-4 {
+        width: 40rem !important;
+        height: 20rem !important;
+    }
+
+    .img-1 {
+        width: 50rem !important;
+        height: 25rem !important;
+    }
+
+    .img-5 {
+        width: 40rem !important;
+        height: 20rem !important;
+    } */
+
 }
 
-#col-left #appetizers.food-title .food-wrapper > .item-wrapper:nth-child(1) > .filler {
-    width: 10%;
+/* @media screen and (min-width: 1024px) and (max-width: 1440px) and (min-height: 1000px) {
+    .links {
+        color: red;
+    }
+
+    .wrapper {
+        min-height: calc(100vh * 1.28);
+    }
 } */
-
