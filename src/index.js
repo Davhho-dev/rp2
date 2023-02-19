@@ -28,6 +28,7 @@ menu.addEventListener("click", () => {
     iceBackground.style.display = "none";
     wrapper.style.gridTemplateRows = ".25fr 11fr .325fr";
     footer.style.marginTop = "10rem";
+    // menuWrapper.style.padding = "0 2.25rem 0 2.25rem";
     // wrapper.style.minHeight = "198.4vh";
     // wrapper.style.minHeight = "3180.35px";
     // console.log(menuWrapper.getAttribute("height"));

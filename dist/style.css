@@ -262,7 +262,8 @@ footer {
 /* ---------- MENU SECTION ---------- */
 .menu-wrapper {
     font-family: var(--main-ft), sans-serif;
-    margin: 1rem var(--menu-left-right-margins) 0 var(--menu-left-right-margins);
+    /* margin: 1rem var(--menu-left-right-margins) 0 var(--menu-left-right-margins); */
+    margin: 1rem 2rem 0 1.5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -451,7 +452,6 @@ footer {
 #pancakes > .food-wrapper > .item-split-wrapper:nth-child(2) > .food-item:nth-child(5),
 #pancakes > .food-wrapper > .item-split-wrapper:nth-child(3) > .food-item:nth-child(3), 
 #pancakes > .food-wrapper > .item-split-wrapper:nth-child(3) > .food-item:nth-child(5) { 
-    /* color: green; */
     font-family: var(--food-ft);
 }
 
@@ -513,6 +513,11 @@ footer {
     margin-right: 2rem;
 }
 
+#vietnamese-specials {
+    width: 100%;
+    padding-right: 1rem;
+}
+
 /* ----- RIGHT COLUMN SPECIAL CASES ----- */
 #platters > .food-wrapper > .item-wrapper > .food-item,
 #platters > .food-wrapper > .item-wrapper > .sub-item-wrapper > .food-item,
@@ -522,8 +527,9 @@ footer {
 }
 
 #seafood-alacarte {
-    padding-right: var(--menu-left-right-margins);
-    width: 108%;
+    /* padding-right: var(--menu-left-right-margins); */
+    /* width: 108%; */
+    width: 100%;
 }
 
 /* ----- MENU FOOD ITEM SPECIAL CASES ----- */
@@ -574,6 +580,11 @@ footer {
 
     .img-carousel {
         left: -21.5%;
+    }
+
+    #seafood-alacarte {
+        width: 100%;
+        padding-right: 0;
     }
 
     /* .img-2 {
