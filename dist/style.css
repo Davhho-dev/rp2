@@ -589,6 +589,14 @@ footer {
 
 /* ---------- MOBILE VIEWING ---------- */
 @media screen and (max-width: 390px) {
+    body, html {
+        overflow-x: hidden;
+    }
+
+    body {
+        position: relative;
+    }
+    
     .wrapper {
         height: 100vh;
     }
