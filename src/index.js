@@ -41,11 +41,11 @@ logoName.addEventListener("click", () => {
     wrapper.removeChild(menuWrapper);
     wrapper.insertBefore(home, footer);
     wrapper.style.gridTemplateRows = ".5fr 5fr .325fr";
-    if(window.innerWidth > "390px") {
+    if(window.innerWidth > "390") {
         const iceBackground = document.querySelector(".ice-bg");
         iceBackground.style.display = "block";
     }
-    console.log(window.innerHeight);
+    console.log(window.innerWidth);
 });
 
 
