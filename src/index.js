@@ -41,8 +41,10 @@ logoName.addEventListener("click", () => {
     wrapper.removeChild(menuWrapper);
     wrapper.insertBefore(home, footer);
     wrapper.style.gridTemplateRows = ".5fr 5fr .325fr";
-    const iceBackground = document.querySelector(".ice-bg");
-    iceBackground.style.display = "block";
+    if(window.innerWidth > "390px") {
+        const iceBackground = document.querySelector(".ice-bg");
+        iceBackground.style.display = "block";
+    }
     console.log(window.innerHeight);
 });
 
