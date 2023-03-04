@@ -588,13 +588,9 @@ footer {
 }
 
 /* ---------- MOBILE VIEWING ---------- */
-@media screen and (max-width: 390px) {
-    body, html {
-        overflow-x: hidden;
-        width: 100%;
-    }
-    
+@media screen and (max-width: 390px) {    
     .wrapper {
+        overflow-x: hidden;
         height: 100vh;
     }
 
