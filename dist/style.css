@@ -613,6 +613,11 @@ footer {
 
     #navbar {
         margin-top: 1rem;
+        width: 100%;
+    }
+
+    .logo-con {
+        width: 100%;
     }
 
     .logo-con > .material-symbols-rounded {
@@ -621,18 +626,20 @@ footer {
     }
 
     .logo-name {
-        margin-left: -2rem;
+        padding-left: 1rem;
         padding-top: .7rem;
     }
     
     .logo-icon {
         width: 93px;
         height: 107px;
+        margin: -3.25rem;
     }
     
     .grass {
+        left: 2.2%;
         bottom: 9%;
-        width: 91.2vw;
+        width: 95vw;
     }
 
     .content {
