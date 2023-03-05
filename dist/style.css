@@ -642,6 +642,38 @@ footer {
         width: 95vw;
     }
 
+    /* ----- MOBILE MENU ----- */
+    .mobile-menu {
+        position: fixed;
+        top: 0;
+        right: 0;
+        background-color: rgba(102,101,101, .68);
+        width: 0;
+        transition: 0.5s;
+        z-index: 1;
+    }
+
+    .mobile-links {
+        color: white;
+        font-size: 1rem;
+        padding-left: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: .5rem !important;
+    }
+
+    .mobile-links > li:nth-child(3) {
+        padding-bottom: 1rem;
+    }
+
+    #close {
+        margin-left: .5rem;
+        margin-top: .5rem;
+        color: white;
+    }
+
     .content {
         margin: 0;
         width: 100vw;

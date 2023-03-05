@@ -57,4 +57,16 @@ function calculateHeight(con) {
     return total;
 }
 
+const hamburger = document.getElementById("hamburger");
+hamburger.addEventListener("click", () => {
+    const mobileMenu = document.querySelector(".mobile-menu");
+    mobileMenu.style.width = "100%";
+});
+
+const close = document.getElementById("close");
+close.addEventListener("click", () => {
+    const mobileMenu = document.querySelector(".mobile-menu");
+    mobileMenu.style.width = "0";
+});
+
 buildMenu();
