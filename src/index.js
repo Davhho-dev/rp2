@@ -81,6 +81,7 @@ mobileLinks.addEventListener("click", (e) => {
         wrapper.removeChild(home);
         wrapper.insertBefore(menuWrapper, footer);
         menuWrapper.style.display = "block";
+        hamburger.style.opacity = "100%";
     }
 });
 
