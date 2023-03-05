@@ -61,13 +61,15 @@ function calculateHeight(con) {
 const hamburger = document.getElementById("hamburger");
 hamburger.addEventListener("click", () => {
     const mobileMenu = document.querySelector(".mobile-menu");
-    mobileMenu.style.width = "100%";
+    mobileMenu.style.width = "90%";
+    hamburger.setAttribute("style", "opacity: 0; transition: all .4s ease;");
 });
 
 const close = document.getElementById("close");
 close.addEventListener("click", () => {
     const mobileMenu = document.querySelector(".mobile-menu");
     mobileMenu.style.width = "0";
+    hamburger.setAttribute("style", "opacity: 100; transition: all .4s ease;");
 });
 
 const mobileLinks = document.querySelector(".mobile-links");
