@@ -57,6 +57,7 @@ function calculateHeight(con) {
     return total;
 }
 
+//MOBILE VIEWING
 const hamburger = document.getElementById("hamburger");
 hamburger.addEventListener("click", () => {
     const mobileMenu = document.querySelector(".mobile-menu");
@@ -67,6 +68,18 @@ const close = document.getElementById("close");
 close.addEventListener("click", () => {
     const mobileMenu = document.querySelector(".mobile-menu");
     mobileMenu.style.width = "0";
+});
+
+const mobileLinks = document.querySelector(".mobile-links");
+mobileLinks.addEventListener("click", (e) => {
+    const footer = document.querySelector("footer");
+    if(e.target.textContent === "menu") {
+        const mobileMenu = document.querySelector(".mobile-menu");
+        mobileMenu.style.width = "0";
+        wrapper.removeChild(home);
+        wrapper.insertBefore(menuWrapper, footer);
+        menuWrapper.style.display = "block";
+    }
 });
 
 buildMenu();

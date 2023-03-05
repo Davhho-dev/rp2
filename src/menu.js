@@ -58,7 +58,7 @@ function createSalads() {
     foodWrapper.appendChild(createFood("Chef (Ham, Roast Beef, Cheese, and Egg)", "none", "$12.60"));
     foodWrapper.appendChild(createFood("Tuna (on Lettuce with sliced tomatoes)", "none", "$11.95"));
     foodWrapper.appendChild(createFood("Chicken Salad on a Bed of Lettuce", "none", "$11.95"));
-    foodWrapper.appendChild(createImg("../dist/images/salad.jpeg", "width: 412px; height: 308px;"));
+    if(window.innerWidth > "420") foodWrapper.appendChild(createImg("../dist/images/salad.jpeg", "width: 412px; height: 308px;"));
     salads.appendChild(foodWrapper);
 }
 
@@ -195,8 +195,10 @@ function createKidsMenu() {
     foodWrapper.appendChild(createFood("Catfish", "none", "$5.35"));
     foodWrapper.appendChild(createFood("Hamburger", "none", "$4.00"));
     foodWrapper.appendChild(createFood("Cheeseburger", "none", "$4.20"));
-    foodWrapper.appendChild(createImg("../dist/images/steak.jpeg", "width: 397px; height: 305px;"));
-    foodWrapper.appendChild(createImg("../dist/images/menu-pelican.svg", "width: 397px; height: 183px;"));
+    if(window.innerWidth > "420") {
+        foodWrapper.appendChild(createImg("../dist/images/steak.jpeg", "width: 397px; height: 305px;"));
+        foodWrapper.appendChild(createImg("../dist/images/menu-pelican.svg", "width: 397px; height: 183px;"));
+    }
     kidsMenu.appendChild(foodWrapper);
 }
 
@@ -208,7 +210,7 @@ function createVietnameseSpecials() {
     foodWrapper.appendChild(createSplitFood(["Pho", "Dine In $10.55", "take out $11.55"]));
     foodWrapper.appendChild(createFood("Bún Bò Xào", "none", "$10.75"));
     foodWrapper.appendChild(createFood("Bún Tôm Nem Nướng", "none", "$12.75"));
-    foodWrapper.appendChild(createImg("../dist/images/vietnamese.jpeg", "width: 381px; height: 285px;"));
+    if(window.innerWidth > "420") foodWrapper.appendChild(createImg("../dist/images/vietnamese.jpeg", "width: 381px; height: 285px;"));
     vietnameseSpecial.appendChild(foodWrapper);
 }
 

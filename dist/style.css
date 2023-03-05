@@ -56,6 +56,10 @@ a:visited {
     align-items: center;
 }
 
+.mobile-menu {
+    display: none;
+}
+
 .logo-con {
     display: flex;
     justify-content: center;
@@ -505,6 +509,7 @@ footer {
 }
 
 #col-right > div > .food-wrapper > .item-split-wrapper {
+    margin-top: .5rem;
     padding-left: 2rem;
 }
 
@@ -642,14 +647,15 @@ footer {
         width: 95vw;
     }
 
-    /* ----- MOBILE MENU ----- */
+    /* ----- MOBILE NAVBAR ----- */
     .mobile-menu {
+        display: block !important;
         position: fixed;
         top: 0;
         right: 0;
         background-color: rgba(102,101,101, .68);
         width: 0;
-        transition: 0.5s;
+        transition: .5s;
         z-index: 1;
     }
 
@@ -725,4 +731,67 @@ footer {
     .ice-bg {
         display: none;
     }
+
+    /* ----- MENU ----- */
+    .menu-header {
+        width: 100%;
+        margin: 1rem -1.75rem;
+        font-size: 30px;
+    }
+
+    .col-wrapper {
+        display: flex;
+        flex-direction: column;
+        margin-right: 3rem;
+        gap: 5rem;
+    }
+
+    #col-left,
+    #col-center,
+    #col-right {
+        gap: 1.25rem;
+    }
+
+    #col-center,
+    #col-right {
+        text-align: left;
+        margin-top: -3.5rem;
+    }
+
+    .filler {
+        margin-top: .3rem;
+        border-bottom: 1px dotted black;
+    }
+
+    .food-title,
+    #col-center > .sub-food-title {
+        font-size: 1rem;
+    }
+
+    .food-wrapper > .item-wrapper,
+    .food-wrapper > .item-wrapper > .sub-item-wrapper,
+    #col-center > .sub-food-title > .food-wrapper > .item-split-wrapper,
+    #col-right > .food-title> .food-wrapper > .item-split-wrapper {
+        font-size: .5rem;
+    }
+
+    .food-wrapper > .sub-title-wrapper {
+        font-size: .5rem !important;
+        padding: .25rem 0 .25rem 1rem !important;
+    }
+
+    .food-wrapper > .sub-title-wrapper > .sub-food-title {
+        font-size: .75rem !important;
+        /* padding: .25rem 0 .25rem 1rem !important; */
+    }
+
+    #col-center > .food-title > .food-wrapper > .item-wrapper,
+    #col-center > .sub-food-title > .food-wrapper > .item-wrapper,
+    #col-center > .sub-food-title > .food-wrapper > .item-split-wrapper, 
+    #col-right > .food-title > .food-wrapper > .item-wrapper,
+    #col-right > .sub-food-title > .food-wrapper > .item-wrapper,
+    #col-right > .food-title> .food-wrapper > .item-split-wrapper {
+        padding-left: 1rem;
+    }
+
 }
