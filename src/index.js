@@ -61,7 +61,7 @@ function calculateHeight(con) {
 const hamburger = document.getElementById("hamburger");
 hamburger.addEventListener("click", () => {
     const mobileMenu = document.querySelector(".mobile-menu");
-    mobileMenu.style.width = "90%";
+    mobileMenu.style.width = "35%";
     hamburger.setAttribute("style", "opacity: 0; transition: all .4s ease;");
 });
 
